@@ -5,7 +5,8 @@ tailwind.config = {
                 main: 'green'
             },
             fontFamily: {
-                poppins: "Poppins", serif,
+                main: 'ADLaM Display',
+                para: 'sora',
             },
             backgroundImage: {
 

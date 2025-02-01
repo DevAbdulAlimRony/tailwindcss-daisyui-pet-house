@@ -2,25 +2,66 @@
 <html lang="en">
 
 <head>
+    <!-- Metas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biker Zone</title>
+    <title>Cat House</title>
 
-    <!-- Poppins Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind + Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
     <script src="tailwind.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        .grid-responsive-400 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1rem;
+        }
+    </style>
 </head>
 
-<body class="font-poppins prose">
-    <h2 class="prose">OKKKKKKKKKKKKKK</h2>
-    <button class="btn btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-info text-main">Daisy UI</button>
+<body class="font-para">
+    <!-- === Navigation Bar === -->
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- === Banner Section === -->
+        <section id="banner"></section>
+
+        <!-- === Categories Section === -->
+        <section id="categories"></section>
+
+        <!-- === New Products Section === -->
+        <section id="new-product"></section>
+
+        <!-- === Trending Product Section === -->
+        <section id="trending-product"></section>
+
+        <!-- === Low Price Product Section === -->
+        <section id="low-price-product"></section>
+    </main>
+
+    <footer>
+        <!-- === News Letter Section === -->
+        <section id="news-letter"></section>
+
+        <!-- === Footer Section === -->
+        <section id="footer"></section>
+    </footer>
 </body>
 
 </html>
