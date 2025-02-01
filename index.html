@@ -3,15 +3,15 @@
 
 <head>
     <!-- Metas -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat House</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- FontAwsome CDN -->
     <script src="https://kit.fontawesome.com/ad9669ebf8.js" crossorigin="anonymous"></script>
@@ -22,42 +22,19 @@
 
     <!-- Tailwind Configuration -->
     <script src="tailwind.js"></script>
-
-    <!-- Custom CSS -->
-    <style>
-        .grid-responsive-400 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1rem;
-        }
-    </style>
 </head>
 
-<body class="font-para">
+<body class="font-para text-para">
     <!-- === Navigation Bar === -->
-    <header>
-        <nav class="bg-light">
+    <header class="w-full bg-light lg:px-10 border-b-2 border-grey-950 lg:border-0">
+        <nav>
             <div class="navbar">
                 <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a class="text-xl">Find a pet</a></li>
-                            <li><a class="text-xl">Breeds</a></li>
-                            <li><a class="text-xl">Contact us</a></li>
-                        </ul>
-                    </div>
                     <a class="btn btn-ghost text-xl">
-                        <img src="./assets/logo-header.png" alt="pet logo">
-                        <h1 class="text-2xl font-normal text-para">Browse<span class="text-main">4</span>Pets</h1>
+                        <img src="./assets/logo-header.png" alt="pet logo" />
+                        <h1 class="text-2xl font-normal text-para">
+                            Browse<span class="text-main">4</span>Pets
+                        </h1>
                     </a>
                 </div>
 
@@ -68,7 +45,8 @@
                         <li><a class="text-xl">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end gap-2">
+
+                <div class="navbar-end gap-2 hidden lg:flex">
                     <!-- Notification Bell Icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
@@ -77,7 +55,7 @@
                     </svg>
 
                     <!-- Search Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="{1.5}"
                         stroke="currentColor" class="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round"
                             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -89,28 +67,56 @@
                     <a
                         class="btn bg-main text-xl font-normal hover:bg-transparent hover:border-1 hover:border-main">Register</a>
                 </div>
+
+                <!-- Hambergur Menu -->
+                <div class="navbar-end lg:hidden">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </div>
+
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 -ml-20 w-52 p-2 shadow">
+                            <li><a class="text-xl hover:bg-main">Find a pet</a></li>
+                            <li><a class="text-xl hover:bg-main">Breeds</a></li>
+                            <li><a class="text-xl hover:bg-main">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
         <!-- === Banner Section === -->
-        <section id="banner">
-            <h2>Pamper Your Pet, Because They Deserve the Bes</h2>
-            <p>Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make
-                tails wag with
-                joy!</p>
-            <a href="btn">Find a pet</a>
+        <section id="banner"
+            class="bg-[url(./assets/cat-big.png)] bg-no-repeat bg-contain lg:bg-cover bg-bottom pb-[15rem] sm:pb-[18rem] md:pb-[20rem] lg:pb-[25rem] my-15 lg:my-[30px] flex flex-col gap-2 px-[30px] lg:px-[70px]">
+            <h2 class="animate-pulse text-title text-[56px]">
+                Pamper Your Pet,<br />
+                Because They Deserve <br />
+                the Best
+            </h2>
+            <p class="text-xl opacity-70 leading-[1.5]">
+                Discover a world of treats, toys, and essentials handpicked for <br />
+                your furry friends. Shop now and make tails wag with joy!
+            </p>
+            <a class="btn bg-main self-start text-xl font-normal hover:bg-transparent hover:border-1 hover:border-main">Find
+                a pet</a>
+            <!-- <img src="assets/cat-big.png" alt="cute big cat" class="absolute"> -->
         </section>
 
         <!-- === Categories Section === -->
-        <section id="categories">
-            <h2>Browse By Categories</h2>
+        <section id="categories" class="mt-[5rem] px-[30px] lg:px-[70px]">
+            <h2 class="text-4xl mb-10">Browse By Categories</h2>
 
-            <div class="category__cards">
+            <div class="category__cards grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
                 <!-- Category Card 1 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/dog-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -120,8 +126,8 @@
                 </div>
 
                 <!-- Category Card 2 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/fish-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -131,8 +137,8 @@
                 </div>
 
                 <!-- Category Card 3 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/cat-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -142,8 +148,8 @@
                 </div>
 
                 <!-- Category Card 4 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/bird-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -153,8 +159,8 @@
                 </div>
 
                 <!-- Category Card 5 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/mouse-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -164,8 +170,8 @@
                 </div>
 
                 <!-- Category Card 6 -->
-                <div class="card">
-                    <figure class="px-10 pt-10">
+                <div class="card bg-secondary">
+                    <figure class="bg-white mx-auto p-4 rounded-full mt-10">
                         <img src="./assets/rabbit-cartoon.png" class="rounded-full" />
                     </figure>
                     <div class="card-body items-center text-center">
@@ -177,8 +183,8 @@
         </section>
 
         <!-- === New Products Section === -->
-        <section id="new-product">
-            <h2>New Arrival Pet Products</h2>
+        <section id="new-product" class="mt-[5rem] px-[30px] lg:px-[70px]">
+            <h2 class="text-4xl mb-10">New Arrival Pet Products</h2>
 
             <div class="new-product__cards">
                 <!-- New Small Cards -->
@@ -350,7 +356,9 @@
                 <div class="new-product__card--lg card">
                     <div class="card-body">
                         <h2 class="card-title">T- Shirt For Dogs</h2>
-                        <p>Discover a world of treats, toys, and essentials handpicked for</p>
+                        <p>
+                            Discover a world of treats, toys, and essentials handpicked for
+                        </p>
                         <div class="card-actions">
                             <button class="btn">Shop Now</button>
                         </div>
@@ -360,182 +368,181 @@
         </section>
 
         <!-- === Trending Product Section === -->
-        <section id="trending-product">
-            <h2>Trending Pet Products</h2>
+        <section id="trending-product" class="mt-[5rem] px-[30px] lg:px-[70px] bg-light">
+            <h2 class="text-4xl mb-10">Trending Pet Products</h2>
 
             <!-- Trending Large Card -->
             <div class="trending-product__cards">
                 <div class="trending-product__card--lg card">
                     <div class="card-body">
                         <h2 class="card-title">T- Shirt For Dogs</h2>
-                        <p>Discover a world of treats, toys, and essentials handpicked for</p>
+                        <p>
+                            Discover a world of treats, toys, and essentials handpicked for
+                        </p>
                         <div class="card-actions">
                             <button class="btn">Shop Now</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Trending Small Cards -->
-                <div class="trending-product__cards--sm">
-                    <!-- Trending Card 1 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/dog-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 1 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/dog-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 2 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/fish-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 2 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/fish-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 3 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/bird-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 3 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/bird-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 4 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/rabbit-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 4 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/rabbit-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 5 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/bird-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 5 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/bird-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 6 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/pet-couch.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 6 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/pet-couch.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 7 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/fish-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 7 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/fish-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 8 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/pet-couch.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 8 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/pet-couch.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Trending Card 9 -->
-                    <div class="card">
-                        <div class="card-body">
-                            <figure class="px-10 pt-10">
-                                <img src="./assets/rabbit-cartoon.png" class="rounded-full" />
-                            </figure>
-                            <div>
-                                <h5>
-                                    <span><input type="radio" name="rating-2"
-                                            class="mask mask-star-2 bg-orange-400" /></span>
-                                    <span>4.5</span>
-                                </h5>
-                                <h4>Pet Bed</h4>
-                                <h5>$39.99</h5>
-                            </div>
+                <!-- Trending Card 9 -->
+                <div class="card">
+                    <div class="card-body">
+                        <figure class="px-10 pt-10">
+                            <img src="./assets/rabbit-cartoon.png" class="rounded-full" />
+                        </figure>
+                        <div>
+                            <h5>
+                                <span><input type="radio" name="rating-2"
+                                        class="mask mask-star-2 bg-orange-400" /></span>
+                                <span>4.5</span>
+                            </h5>
+                            <h4>Pet Bed</h4>
+                            <h5>$39.99</h5>
                         </div>
                     </div>
                 </div>
@@ -594,10 +601,13 @@
         <section id="footer">
             <div class="footer_logo">
                 <div>
-                    <img src="./assets/logo-footer.png" alt="cat black color logo">
+                    <img src="./assets/logo-footer.png" alt="cat black color logo" />
                     <h2>Browse<span>4</span>Pets</h2>
                 </div>
-                <p>Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+                <p>
+                    Discover a world of treats, toys, and essentials handpicked for your
+                    furry friends
+                </p>
             </div>
 
             <div class="footer__list">
