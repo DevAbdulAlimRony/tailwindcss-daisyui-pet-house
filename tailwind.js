@@ -8,12 +8,10 @@ tailwind.config = {
                 para: '#111111',
             },
             fontFamily: {
-                title: 'ADLaM Display',
-                para: 'sora',
-            },
-            backgroundImage: {
-
+                title: ['ADLaM Display', 'sans-serif'],
+                para: ['Sora', 'sans-serif'],
             }
+
         }
     }
 }
